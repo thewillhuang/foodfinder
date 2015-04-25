@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run version && npm run production",
+    "postinstall": "npm run bower && npm run version && npm run production",
     "bower": "bower install --config.interactive=false",
     "version": "node -v",
-    "build": "cd gulp && npm install && NODE_ENV=development && cd node_modules/gulp-sass/ && npm uninstall node-sass && npm install node-sass && gulp",
+    "rebuildSass": "cd node_modules/gulp-sass/ && npm uninstall node-sass && npm install node-sass",
+    "build": "cd gulp && npm install && NODE_ENV=development && gulp",
     "start": "node server",
     "test": "npm run production",
-    "production": "cd gulp && npm install && NODE_ENV=production && cd node_modules/gulp-sass/ && npm uninstall node-sass && npm install node-sass && gulp production"
+    "production": "cd gulp && npm install && NODE_ENV=production && gulp production"
   },
   "repository": {
     "type": "git",
