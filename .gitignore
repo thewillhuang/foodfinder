@@ -6,3 +6,4 @@ plugins
 build
 public
 gulp/node_modules
+**/*.log

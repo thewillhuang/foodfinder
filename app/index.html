@@ -8,48 +8,45 @@
 </head>
 
 <body>
-  <header>
+  <div class="container-fluid">
 
-    <div class="row head">
-      <div class="logo">
-        <img src="images/logo_redwhite.png">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="logo">
+          </a>
+        </div>
+
+        <div id="login"></div>
+
       </div>
-      <div class="login">
-        <div class="login-section" style="display: inline-block; float: left; margin-right: 20px;">
-          <form class="form-inline">
-            <div class="form-group">
-              <input type="email" class="form-control input-sm" id="userEmail" placeholder="Email">
-            </div>
-          </form>
-          <form class="form-inline">
-            <div class="form-group" style="margin: 0;" class="remember-me">
-              <!-- <label for="rememberMe" style="font-weight: 400;" id="rememberMeLbl">Remember Me</label> -->
-              <!-- <input type="checkbox" class="form-control input-sm" style="margin: 0;" id="rememberMe" placeholder=" "> -->
-            </div>
-          </form>
-        </div>
-        <div class="login-section" style="display: inline-block; float: left; margin-right: 20px;">
-          <form class="form-inline">
-            <div class="form-group">
-              <input type="password" class="form-control input-sm" id="userPassword" placeholder="Password">
-            </div>
-          </form>
-          <a href="" style="clear: both; color: #fff;" id="forgotPasswordBtn">Forgot Password?</a>
-        </div>
-        <div class="login-section" style="display: inline-block; float: left;">
-          <button class="btn btn-primary login-btn" id="loginBtn">Login</button>
-        </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-md-4 col-sm-4"></div>
+      <div class="col-md-4 col-sm-4 hero">
+        <h1>Only the very best</h1>
       </div>
+      <div class="col-md-4 col-sm-4"></div>
     </div>
 
-    <div class="row slogan">
-      <h1>Only the very best</h1>
-      <div id="forgotPassword" class="form-group">
-        <input type="search" class="form-control input-lg forgot-email" id="resetEmailTextBox" placeholder="Search For Goodies"></input>
-        <button class="btn btn-lg btn-primary register-btn" id="resetEmail" style="width: 250px;">search</button>
+    <div class="row">
+      <div class="col-md-4 col-sm-4"></div>
+      <div class="col-md-4 col-sm-4 input-group">
+        <input type="text" class="form-control" placeholder="Location">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Search</button>
+        </span>
       </div>
+      <div class="col-md-4 col-sm-4"></div>
     </div>
-  </header>
+
+  </div>
+
+  <script type="text/javascript" src="./javascript/app.bundle.js"></script>
+
 </body>
 
 </html>

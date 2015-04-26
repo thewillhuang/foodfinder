@@ -7,18 +7,6 @@
     "type": "git",
     "url": ""
   },
-  "browser": {
-    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
-  },
-  "browserify-shim": {
-    "bootstrap": {
-      "exports": "bootstrap",
-      "depends": [
-        "jquery:$",
-        "jquery:jQuery"
-      ]
-    }
-  },
   "browserify": {
     "transform": [
       [
@@ -26,17 +14,12 @@
         {
           "es6": true
         }
-      ],
-      "babelify",
-      "envify",
-      "browserify-shim"
+      ]
     ]
   },
   "devDependencies": {
-    "babelify": "^5.0.4",
     "browser-sync": "^2.2.2",
     "browserify": "^9.0.3",
-    "browserify-shim": "^3.8.3",
     "chalk": "^0.5.1",
     "compression": "^1.4.1",
     "envify": "^3.3.0",
@@ -71,10 +54,6 @@
     "watchify": "^2.4.0"
   },
   "dependencies": {
-    "lodash": "^2.4.1",
-    "method-override": "^2.3.1",
-    "moment": "^2.9.0",
-    "react": "^0.13.2",
-    "react-bootstrap": "^0.21.0"
+    "method-override": "^2.3.1"
   }
 }
