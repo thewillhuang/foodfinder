@@ -8,7 +8,7 @@ var Login = React.createClass({
   render: function() {
     return (
       <ModalTrigger modal={ <LoginModal /> } >
-        <button type="button" className="btn btn-default navbar-btn navbar-right">login</button>
+        <button type="button" className="btn btn-primary navbar-btn navbar-right">LOGIN</button>
       </ModalTrigger>
     );
   }
