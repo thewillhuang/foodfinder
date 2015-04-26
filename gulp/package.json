@@ -21,7 +21,6 @@
     "browser-sync": "^2.2.2",
     "browserify": "^9.0.3",
     "chalk": "^0.5.1",
-    "compression": "^1.4.1",
     "envify": "^3.3.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.0.0",

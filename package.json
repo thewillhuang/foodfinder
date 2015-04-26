@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run version && npm run bower && npm run gulpBuild && npm run rebuildSass",
+    "postinstall": "npm run version && npm run bower && npm run gulpBuild && npm run rebuildSass && npm run production",
     "version": "node -v",
     "bower": "bower install --config.interactive=false",
     "gulpBuild": "cd gulp && npm install",
@@ -24,9 +24,13 @@
   },
   "browserify": {
     "transform": [
-      "envify", ["reactify", {
-        "es6": true
-      }]
+      "envify",
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
     ]
   },
   "homepage": "https://github.com/WillM88/FooFinder",

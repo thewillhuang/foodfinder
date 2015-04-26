@@ -4,7 +4,7 @@ var dest = '../public';
 var src = '../app';
 var gulp = './gulp';
 var neat = require('node-neat').includePaths;
-var compression = require('compression');
+// var compression = require('compression');
 
 module.exports = {
   browserSync: {
