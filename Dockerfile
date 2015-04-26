@@ -24,7 +24,7 @@ ENV NVM_DIR /usr/local/nvm
 
 # install node
 ENV NODE_VERSION v0.12
-ENV NODE_BRANCH node/v0.12.2
+ENV NODE_WD node/v0.12.2
 # ENV NODE_VERSION iojs
 # ENV NODE_BRANCH io.js/v1.7.1
 
@@ -36,8 +36,8 @@ RUN source $NVM_DIR/nvm.sh \
     && nvm use default \
 
 #Set npm and node paths to allow running npm and node executables
-ENV NODE_PATH $NVM_DIR/versions/$NODE_BRANCH/lib/node_modules
-ENV PATH      $NVM_DIR/versions/$NODE_BRANCH/bin:$PATH
+ENV NODE_PATH $NVM_DIR/versions/$NODE_WD/lib/node_modules
+ENV PATH      $NVM_DIR/versions/$NODE_WD/bin:$PATH
 
 # forever for running node apps as daemons and automatically restarting on crashes
 # gulp, grunt-cli, bower typical front-end stuff
