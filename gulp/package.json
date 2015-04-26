@@ -7,21 +7,10 @@
     "type": "git",
     "url": ""
   },
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "es6": true
-        }
-      ]
-    ]
-  },
   "devDependencies": {
     "browser-sync": "^2.2.2",
     "browserify": "^9.0.3",
     "chalk": "^0.5.1",
-    "envify": "^3.3.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-cached": "^1.0.4",
@@ -43,16 +32,12 @@
     "hbsfy": "~2.0.0",
     "imagemin-pngquant": "^4.0.0",
     "merge-stream": "^0.1.7",
-    "node-bourbon": "^1.2.3",
     "node-neat": "^1.4.2",
     "pretty-hrtime": "~1.0.0",
-    "reactify": "^1.0.0",
     "require-dir": "^0.1.0",
     "should": "^4.6.1",
     "vinyl-source-stream": "~0.1.1",
+    "method-override": "^2.3.1",
     "watchify": "^2.4.0"
-  },
-  "dependencies": {
-    "method-override": "^2.3.1"
   }
 }

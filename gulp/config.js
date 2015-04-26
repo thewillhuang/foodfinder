@@ -60,7 +60,7 @@ module.exports = {
     script: '../server.js',
     // watch core server file(s) that require server restart on change
     watch: ['../server.js', '../server/**/*'],
-    env: { 'NODE_ENV': 'development', 'PORT': 5000 }
+    env: { 'PORT': 5000 }
   },
   browserify: {
     // A separate bundle will be generated for each
@@ -85,7 +85,7 @@ module.exports = {
       {
         entries: src + '/javascript/app.js',
         dest: dest + '/javascript/',
-        outputName: 'app.bundle.js'
+        outputName: 'app.js'
       }]
   },
   production: {
