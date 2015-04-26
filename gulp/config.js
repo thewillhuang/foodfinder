@@ -89,7 +89,7 @@ module.exports = {
       }]
   },
   production: {
-    cssSrc: dest + '/**/*.css',
+    cssSrc: dest + '/sass/**/*.css',
     jsSrc: [
       dest + '/**/*.bundle.js'
       // dest + '/js/**/*.js',
@@ -99,6 +99,7 @@ module.exports = {
       // '!' + dest + '/js/cors/**/*',
       // '!' + dest + '/plugins/**/*.js'
       ],
+    cssDest: dest + '/sass/',
     dest: dest,
     cssOpt: {
       keepSpecialComments: 0
@@ -108,7 +109,7 @@ module.exports = {
     opts: {
       spare: true
     },
-    src: dest + '**/*.html',
+    src: src + '/htdocs/**/*.html',
     dest: dest
   }
 };

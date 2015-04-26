@@ -12,7 +12,7 @@ gulp.task('minifyCss', ['sass'], function() {
   return gulp.src(config.cssSrc)
     // .pipe(uncss({html:[markup.src]}))
     .pipe(minifyCSS(config.cssOpt))
-    .pipe(gulp.dest(config.dest))
+    .pipe(gulp.dest(config.cssDest))
     .pipe(size())
     .pipe(browserSync.reload({stream:true}));
 });
