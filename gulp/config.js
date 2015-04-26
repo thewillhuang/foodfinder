@@ -85,7 +85,7 @@ module.exports = {
       {
         entries: src + '/javascript/app.js',
         dest: dest + '/javascript/',
-        outputName: 'app.js'
+        outputName: 'app.bundle.js'
       }]
   },
   production: {
