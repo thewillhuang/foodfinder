@@ -9,6 +9,7 @@ var LoginModal = React.createClass({
     return (
       <Modal onRequestHide={this.props.onRequestHide} bsStyle='primary' title='Login' animation={true}>
         <h1 className="text-center">Login</h1>
+
         <div className="modal-body">
           <form className="form col-md-12 center-block">
             <div className="form-group">
@@ -23,9 +24,13 @@ var LoginModal = React.createClass({
             </div>
           </form>
         </div>
-        <div className="col-md-12">
-          <Button onClick={this.props.onRequestHide}>Close</Button>
-	      </div>
+
+        <div className="modal-footer">
+          <div className="col-md-12">
+            <Button onClick={this.props.onRequestHide}>Close</Button>
+  	      </div>
+        </div>
+
       </Modal>
     );
   }

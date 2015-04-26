@@ -89,9 +89,9 @@ module.exports = {
       }]
   },
   production: {
-    cssSrc: dest + '/*.css',
+    cssSrc: dest + '/**/*.css',
     jsSrc: [
-      dest + '/*.js'
+      dest + '/**/*.bundle.js'
       // dest + '/js/**/*.js',
       // '!' + dest + '/js/components/**/*',
       // '!' + dest + '/js/test/**/*',
