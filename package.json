@@ -26,7 +26,8 @@
     ]
   },
   "devDependencies": {
-    "reactify": "^1.1.0"
+    "reactify": "^1.1.0",
+    "gulp": "^3.8.11"
   },
   "scripts": {
     "postinstall": "npm run version && npm run bower && npm run gulpBuild && npm run rebuildSass && npm run production",
