@@ -32,7 +32,7 @@
     "postinstall": "npm run version && npm run bower && npm run gulpBuild && npm run rebuildSass && npm run production",
     "version": "node -v",
     "bower": "bower install --config.interactive=false",
-    "gulpBuild": "cd gulp && npm install",
+    "gulpBuild": "cd gulp/ && npm install",
     "rebuildSass": "cd gulp/ && cd node_modules/gulp-sass/ && npm uninstall node-sass && npm install node-sass",
     "build": "cd gulp/ && NODE_ENV=development && gulp",
     "start": "node server",
