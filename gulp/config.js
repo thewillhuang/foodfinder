@@ -34,7 +34,7 @@ module.exports = {
       src + '/**/*',
       '!' + src + '/images/**/*',
       '!' + src + '/sass/**/*.{sass,scss}',
-      '!' + src + '/**/*.html'
+      '!' + src + '/htdocs/**/*.html'
     ], // '!' must be a string
     // '!' + src + '/{js,js/**/*}',
     //'!' + src + '/{plugins,plugins/**/*}',
@@ -52,7 +52,7 @@ module.exports = {
     dest: dest + '/images/'
   },
   markup: {
-    src: src + '/**/*.html',
+    src: src + '/htdocs/**/*.html',
     dest: dest
   },
   nodemon:{
