@@ -1,25 +1,24 @@
-@import '../plugins/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
-
+@import '../plugins/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'font';
 //set background image
 body {
-  background-image: url('../images/weedBg.jpg');
+  background-image: url("../images/weedBg.jpg");
   overflow: hidden;
 }
-
 //nav bar transparent
 .navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
-   margin-bottom: 200px;
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  margin-bottom: 200px;
 }
-
 .search {
   margin: 0 auto;
   width: 400px;
 }
-
-.hero{
+.hero {
   text-align: center;
+  font-family: "dancing_scriptbold";
   color: white;
+  font-size: 4em;
 }
