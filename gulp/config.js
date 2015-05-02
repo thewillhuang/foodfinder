@@ -17,8 +17,8 @@ module.exports = {
     // },
   },
   sass: {
-    src: src + '/sass/**/*.{sass,scss}',
-    dest: dest + '/sass/',
+    src: src + '/stylesheets/**/*.{sass,scss}',
+    dest: dest + '/stylesheets/',
     settings: {
       sourcemap: true,
       sourceComments: 'map',
@@ -33,7 +33,7 @@ module.exports = {
     src: [
       src + '/**/*',
       '!' + src + '/images/**/*',
-      '!' + src + '/sass/**/*.{sass,scss}',
+      '!' + src + '/stylesheets/**/*.{sass,scss}',
       '!' + src + '/htdocs/**/*.html'
     ], // '!' must be a string
     // '!' + src + '/{js,js/**/*}',
@@ -89,7 +89,7 @@ module.exports = {
       }]
   },
   production: {
-    cssSrc: dest + '/sass/**/*.css',
+    cssSrc: dest + '/stylesheets/**/*.css',
     jsSrc: [
       dest + '/**/*.bundle.js'
       // dest + '/js/**/*.js',
@@ -99,7 +99,7 @@ module.exports = {
       // '!' + dest + '/js/cors/**/*',
       // '!' + dest + '/plugins/**/*.js'
       ],
-    cssDest: dest + '/sass/',
+    cssDest: dest + '/stylesheets/',
     dest: dest,
     cssOpt: {
       keepSpecialComments: 0

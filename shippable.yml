@@ -10,6 +10,3 @@ services:
 
 script:
   - true
-
-before_install:
-  # - npm install -g gulp

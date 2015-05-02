@@ -16,6 +16,9 @@
   "dependencies": {
     "font-awesome": "~4.3.0",
     "bootstrap-sass-official": "~3.3.4",
-    "animate.css": "~3.2.6"
+    "animate.css": "~3.2.6",
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.2",
+    "bitters": "~1.0.0"
   }
 }
