@@ -1,12 +1,43 @@
 <html>
-  <head>
-    <title>Search For the best stuff.</title>
-    <link rel="stylesheet" href="./stylesheets/search.css" media="screen" title="no title" charset="utf-8">
-  </head>
-  <body>
 
+<head>
+  <title>Search For the best stuff.</title>
+  <link rel="stylesheet" href="./stylesheets/search.css" media="screen" title="no title" charset="utf-8">
+</head>
 
+<body>
 
-    <script type="text/javascript" src="./javascript/app.bundle.js"></script>
-  </body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <!-- <img alt="Brand" src="logo"> -->
+        </a>
+      </div>
+
+      <div id="login"></div>
+
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-2 col-sm-3 col-xs-0" id="reactFilter">
+        filter
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12" id="reactListView">
+        list view
+      </div>
+      <div class="col-md-6 col-sm-5 col-xs-0" id="googleMap">
+        map view
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="./javascript/search.bundle.js"></script>
+</body>
+
 </html>

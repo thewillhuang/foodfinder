@@ -3,8 +3,6 @@
 var dest = '../public';
 var src = '../app';
 var gulp = './gulp';
-var neat = require('node-neat').includePaths;
-// var compression = require('compression');
 
 module.exports = {
   browserSync: {
@@ -22,8 +20,7 @@ module.exports = {
     settings: {
       sourcemap: true,
       sourceComments: 'map',
-      imagePath: '/images', // Used by the imlpage-url helper
-      includePaths: ['styles'].concat(neat)
+      imagePath: '/images' // Used by the imlpage-url helper
     },
     sourcemap: {
       loadMaps: true
@@ -82,6 +79,11 @@ module.exports = {
       //   // list of externally available modules to exclude from the bundle
       //   // external: ['jquery', 'underscore']
       // },
+      {
+        entries: src + '/javascript/search.js',
+        dest: dest + '/javascript/',
+        outputName: 'search.bundle.js'
+      },
       {
         entries: src + '/javascript/app.js',
         dest: dest + '/javascript/',

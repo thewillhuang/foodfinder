@@ -1,7 +1,7 @@
-'use strict';
-var React = require('react');
-var LoginModal = require('./loginModal.jsx');
-var ModalTrigger = require('react-bootstrap').ModalTrigger;
+"use strict";
+var React = require("react");
+var LoginModal = require("./loginModal.jsx");
+var ModalTrigger = require("react-bootstrap").ModalTrigger;
 
 var Login = React.createClass({
 
@@ -15,6 +15,6 @@ var Login = React.createClass({
 
 });
 
-React.render(<Login />, document.getElementById('login'));
+React.render(<Login />, document.getElementById("login"));
 
 module.exports = Login;
