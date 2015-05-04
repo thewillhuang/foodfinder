@@ -10,7 +10,8 @@ var Reviews = React.createClass({
 
   propTypes: {
     stars: React.PropTypes.number.isRequired,
-    id: React.PropTypes.string.isRequired
+    id: React.PropTypes.string.isRequired,
+    reviewNumber: React.PropTypes.number.isRequired
   },
 
   getInitialState: function(){
@@ -45,19 +46,22 @@ var Reviews = React.createClass({
 
   render: function() {
     var starSet = [];
-    for (var i = 1; i < this.state.max + 1; i++) {
-      if (i < this.state.stars){
+    var total = this.state.stars;
+    console.log(total);
+    for (var i = 0; i < this.state.max; i++) {
+      if (total >= 1) {
+        total--;
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={full} key={i} index={i}/>);
-      } else if (i > this.state.stars && (i - this.state.stars) >= 0.5 && (i-this.state.stars) < 1) {
-        //TODO get this half star right
+      } else if (total > 0) {
+        total = 0;
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={half} key={i} index={i}/>);
-      } else {
+      } else if (total <= 0) {
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={empty} key={i} index={i}/>);
       }
     }
     return (
       <div>
-        {starSet}
+        {starSet} <em>{this.props.reviewNumber} reviews</em>
       </div>
     );
   }

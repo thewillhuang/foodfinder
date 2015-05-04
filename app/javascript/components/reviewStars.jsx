@@ -25,10 +25,10 @@ var Stars = React.createClass({
 
   render: function() {
     return (
-      <i className={this.props.class}
-        onMouseOver={this.handleHover}
-        onMouseOut={this.handleUnhover}
-        onClick={this.handleClick}></i>
+        <i className={this.props.class}
+          onMouseOver={this.handleHover}
+          onMouseOut={this.handleUnhover}
+          onClick={this.handleClick}></i>
     );
   }
 

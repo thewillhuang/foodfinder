@@ -26,26 +26,32 @@ var SearchListItem = React.createClass({
 
           <div className="row">
             <div className="col-md-9 col-sm-9">
-              <h5>{this.props.data.businessName}</h5>
+              {this.props.data.businessName}
             </div>
             <div className="col-md-3 col-sm-3">
-              <h5>{this.props.data.distance} miles</h5>
+              {this.props.data.distance} miles
             </div>
           </div>
 
           <div className="row">
             <div className="col-md-12 col-sm-12">
-              <ListItemReview stars={this.props.data.stars} id={this.props.data.id}/>
+              <ListItemReview stars={this.props.data.stars} id={this.props.data.id} reviewNumber={this.props.data.reviewNumber}/>
             </div>
           </div>
 
           <div className="row">
             <div className="col-md-12 col-sm-12">
-              <h5>{this.props.data.address.address || this.props.data.address.address2} {this.props.data.address.city} {this.props.data.address.state} {this.props.data.address.zip}</h5>
+              {this.props.data.address.address || this.props.data.address.address2} {this.props.data.address.city} {this.props.data.address.state} {this.props.data.address.zip}
             </div>
           </div>
-          
-          <hr></hr>
+
+          <div className="row">
+            <div className="col-md-12 col-sm-12">
+              Phone: {this.props.data.phone}
+            </div>
+          </div>
+
+          <hr/>
 
         </div>
 
