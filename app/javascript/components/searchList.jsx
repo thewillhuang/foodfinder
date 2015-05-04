@@ -7,7 +7,7 @@ var SearchList = React.createClass({
   render: function() {
     return (
       <div>
-        <SearchItem data={{businessName:"KushKings", distance:"5miles", stars: 3, id:"29493jfldsakjfd"}}/>
+        <SearchItem data={{businessName:"KushKings", distance:"5miles", stars: 2.5, id:"29493jfldsakjfd"}}/>
       </div>
     );
   }

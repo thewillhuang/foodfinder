@@ -1,8 +1,10 @@
 "use strict";
 var React = require("react");
 var Stars = require("./reviewStars.jsx");
+
 var empty = "fa fa-star-o fa-lg";
 var full = "fa fa-star fa-lg";
+var half = "fa fa-star-half-o fa-lg";
 
 var Reviews = React.createClass({
 
@@ -30,14 +32,12 @@ var Reviews = React.createClass({
 
   handleHover: function(i) {
     i++;
-    console.log("handleHover", i, this.props.id);
     this.setState({
       stars: i
     });
   },
 
   handleUnhover: function(){
-    console.log("handleUnhover");
     this.setState({
       stars: this.state.origin
     });
@@ -45,12 +45,13 @@ var Reviews = React.createClass({
 
   render: function() {
     var starSet = [];
-    for (var i = 0; i < this.state.max; i++ ) {
+    for (var i = 1; i < this.state.max + 1; i++) {
       if (i < this.state.stars){
-        console.log("full Star");
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={full} key={i} index={i}/>);
+      } else if (i > this.state.stars && (i - this.state.stars) >= 0.5 && (i-this.state.stars) < 1) {
+        //TODO get this half star right
+        starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={half} key={i} index={i}/>);
       } else {
-        console.log("empty Star");
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={empty} key={i} index={i}/>);
       }
     }
