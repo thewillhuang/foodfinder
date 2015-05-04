@@ -51,7 +51,6 @@ var Reviews = React.createClass({
       return value;
     }
     var total = round(this.state.stars);
-    console.log(total);
     for (var i = 0; i < this.state.max; i++) {
       if (total >= 1) {
         total--;
