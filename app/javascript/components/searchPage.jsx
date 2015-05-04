@@ -20,7 +20,21 @@ var data = [{
 {
   businessName:"KushKings2",
   distance:"3",
-  stars: 1,
+  stars: 0.3,
+  reviewNumber: 100,
+  phone: "111-222-3333",
+  id: "lkfjddfaasl;kfjoijffadslfakj",
+  address:{
+    address: "2950 Arboridge Ct.",
+    city: "fullerton",
+    state: "ca",
+    zip: "92835"
+  }
+},
+{
+  businessName:"KushKings2",
+  distance:"3",
+  stars: 0.9,
   reviewNumber: 100,
   phone: "111-222-3333",
   id: "lkfjddfaasl;kfjoijffadslfakj",
@@ -33,7 +47,7 @@ var data = [{
 },{
   businessName:"KushKings3",
   distance:"5",
-  stars: 1.5,
+  stars: 1.4,
   phone: "111-222-3333",
   reviewNumber: 52,
   id: "lkfafdjdasl;kfjoijffadslfakj",
@@ -46,7 +60,7 @@ var data = [{
 },{
   businessName:"KushKings4",
   distance:"3",
-  stars: 2,
+  stars: 1.9,
   reviewNumber: 105,
   id: "lkfjddsfasdafasl;kfjoijffadslfakj",
   phone: "111-222-3333",
@@ -60,7 +74,7 @@ var data = [{
   businessName:"KushKings5",
   distance:"5",
   reviewNumber: 730,
-  stars: 2.5,
+  stars: 2.4,
   phone: "111-222-3333",
   id: "lkfjdasl;kfjoijffadsfdalfakj",
   address:{
@@ -74,7 +88,7 @@ var data = [{
   distance:"1",
   reviewNumber: 420,
   phone: "111-222-3333",
-  stars: 3,
+  stars: 2.9,
   id: "lkfjdasl;kfjoijffadslfakj",
   address:{
     address: "2950 Arboridge Ct.",
@@ -87,7 +101,7 @@ var data = [{
   distance:"1",
   reviewNumber: 420,
   phone: "111-222-3333",
-  stars: 3.5,
+  stars: 3.4,
   id: "lkfjdasl;kfjoijffadslfakj",
   address:{
     address: "2950 Arboridge Ct.",
@@ -100,7 +114,7 @@ var data = [{
   distance:"1",
   reviewNumber: 420,
   phone: "111-222-3333",
-  stars: 4,
+  stars: 3.9,
   id: "lkfjdasl;kfjoijffadslfakj",
   address:{
     address: "2950 Arboridge Ct.",
@@ -113,7 +127,7 @@ var data = [{
   distance:"1",
   reviewNumber: 420,
   phone: "111-222-3333",
-  stars: 4.5,
+  stars: 4.4,
   id: "lkfjdasl;kfjoijffadslfakj",
   address:{
     address: "2950 Arboridge Ct.",
@@ -126,7 +140,7 @@ var data = [{
   distance:"1",
   reviewNumber: 420,
   phone: "111-222-3333",
-  stars: 5,
+  stars: 4.9,
   id: "lkfjdasl;kfjoijffadslfakj",
   address:{
     address: "2950 Arboridge Ct.",

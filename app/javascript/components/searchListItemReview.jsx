@@ -46,7 +46,11 @@ var Reviews = React.createClass({
 
   render: function() {
     var starSet = [];
-    var total = this.state.stars;
+    function round(number) {
+      var value = (number * 2).toFixed() / 2;
+      return value;
+    }
+    var total = round(this.state.stars);
     console.log(total);
     for (var i = 0; i < this.state.max; i++) {
       if (total >= 1) {
@@ -55,7 +59,7 @@ var Reviews = React.createClass({
       } else if (total > 0) {
         total = 0;
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={half} key={i} index={i}/>);
-      } else if (total <= 0) {
+      } else if (total === 0) {
         starSet.push(<Stars handleClick={this.handleClick} handleHover={this.handleHover} handleUnhover={this.handleUnhover} class={empty} key={i} index={i}/>);
       }
     }
