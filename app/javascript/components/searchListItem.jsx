@@ -9,7 +9,6 @@ var SearchListItem = React.createClass({
   },
 
   render: function() {
-    console.log(this.props.data);
     var profilePhoto = "";
     if (this.props.data.businessPhoto) {
       profilePhoto = "data:image/jpeg;charset=utf-8;base64," + this.props.data.businessPhoto;
@@ -45,8 +44,11 @@ var SearchListItem = React.createClass({
               <h5>{this.props.data.address.address || this.props.data.address.address2} {this.props.data.address.city} {this.props.data.address.state} {this.props.data.address.zip}</h5>
             </div>
           </div>
+          
+          <hr></hr>
 
         </div>
+
 
       </div>
     );
