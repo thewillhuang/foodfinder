@@ -1,5 +1,5 @@
 "use strict";
-window.jQuery = require("jquery");
+window.jQuery = window.$ = require("jquery");
 require("bootstrap");
 require("./components/searchPage.jsx");
 require("./components/login.jsx");

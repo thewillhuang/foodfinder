@@ -23,10 +23,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ENV NVM_DIR /usr/local/nvm
 
 # install node
-ENV NODE_VERSION v0.12
-ENV NODE_WD node/v0.12.2
-# ENV NODE_VERSION iojs
-# ENV NODE_BRANCH io.js/v1.7.1
+# ENV NODE_VERSION v0.12
+# ENV NODE_BRANCH node/v0.12.2
+ENV NODE_VERSION iojs
+ENV NODE_BRANCH io.js/v2.0.0
 
 # Install nvm and use node version defined above.
 RUN git clone https://github.com/creationix/nvm.git $NVM_DIR && cd $NVM_DIR && git checkout `git describe --abbrev=0 --tags`
@@ -36,8 +36,8 @@ RUN source $NVM_DIR/nvm.sh \
     && nvm use default \
 
 #Set npm and node paths to allow running npm and node executables
-ENV NODE_PATH $NVM_DIR/versions/$NODE_WD/lib/node_modules
-ENV PATH      $NVM_DIR/versions/$NODE_WD/bin:$PATH
+ENV NODE_PATH $NVM_DIR/versions/$NODE_BRANCH/lib/node_modules
+ENV PATH      $NVM_DIR/versions/$NODE_BRANCH/bin:$PATH
 
 # forever for running node apps as daemons and automatically restarting on crashes
 # gulp, grunt-cli, bower typical front-end stuff
@@ -52,15 +52,11 @@ EXPOSE $PORT
 #   s  dest
 ADD . ./
 
-# or alternatively we can clone it using oauth token so theres no prompt in git clone.
-# RUN git clone https://<oAuth key>:x-oauth-basic@github.com/thewillhuang/status.git /src
-
 # make user and set /src as project folder with only user privelages. *running as root will make bower and npm go nuts*
 RUN /usr/sbin/useradd --create-home --home-dir /usr/local/nonroot --shell /bin/bash nonroot
 RUN chown -R nonroot /src
 USER nonroot
 ENV HOME /usr/local/nonroot
 
-# runs below command in WORKDIR when the images is ran. do a git pull and npm install
-# CMD git pull https://<oAuth key>:x-oauth-basic@github.com/thewillhuang/status.git && cd /src && npm install
-CMD npm install
+# when the image is run, docker will pull, and install, using cached files, should be much faster then rebuilding from scrach each time.
+CMD npm install && npm run production && forever server.js

@@ -7,7 +7,6 @@ bower_components
 **/*.log
 public
 app/plugins
-app/js/config.js
 gulp/node_modules
 Dockerfile
 .dockerignore
