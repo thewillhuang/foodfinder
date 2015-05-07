@@ -6,7 +6,7 @@ var SearchFilter = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="noselect">
         <h4>Filters</h4>
         <ul>
           <li><Input type='checkbox' label='Open Now' readOnly /></li>

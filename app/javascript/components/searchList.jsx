@@ -17,7 +17,7 @@ var SearchList = React.createClass({
     var navHeight = window.$("#navbar").height();
     return (
       <div>
-        <Infinite containerHeight={viewPortHeight - navHeight} elementHeight={70}>
+        <Infinite className="noselect" containerHeight={viewPortHeight - navHeight} elementHeight={100}>
           {listSet}
         </Infinite>
       </div>
